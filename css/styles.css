@@ -1,0 +1,191 @@
+/* Основной цвет текста: #212121
+Вторичный цвет текста: #757575
+Акценторный цвет текста: #2196F3
+Цвета для логотипа: #2196F3 и #000000
+Цвет Заголовка и в футере: #ffffff
+Цвет текста имейла и тел в футере: rgba(255, 255, 255, 0.6)
+
+Цвет фона: #ffffff
+Цвет фона для Заголовка и Футера: #2F303A
+Цвет фона для Наша Команда: #F5F4FA
+
+Размер шрифта: 
+Основной шрифт: Roboto normal and bold
+Шрифт Логотипа: Raleway bold
+ */
+:root {
+  --title-color: #ffffff;
+  --title-background-color: #2f303a;
+  --minititles-color: #212121;
+  --inside-color: #757575;
+  --active-color: #2196f3;
+  --logo-studio-color: #000000;
+  --team-container-background: #f5f4fa;
+  --tel-in-footer-color: rgba(255, 255, 255, 0.6);
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  color: var(--minititles-color);
+  background-color: var(--title-color);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
+.web-logotext {
+  /* стили для части Web в логотипе */
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  color: var(--active-color);
+}
+.studio-logotext {
+  /* стили для части Studio в логотипе */
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  color: var(--logo-studio-color);
+}
+
+.site-nav a {
+  color: var(--minititles-color);
+}
+
+a {
+  /* стили к ссылкам */
+  text-decoration: none;
+  color: var(--inside-color);
+  cursor: pointer;
+}
+a:hover,
+a:focus,
+a:active {
+  color: var(--active-color);
+}
+.site-nav a.current {
+  color: var(--active-color);
+}
+
+li {
+  /* стили к пунктам списков */
+  list-style-type: none;
+}
+
+.mail-tel-nav {
+  letter-spacing: 0.02em;
+}
+
+.title {
+  /*  стили для заголовка */
+  background: var(--title-background-color);
+  color: var(--title-color);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.4;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+.button {
+  /* стили для кнопки Заказать Услуги */
+  color: var(--title-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  background-color: var(--active-color);
+  letter-spacing: 0.06em;
+}
+
+.features-whatdo-common h3 {
+  /* стили для Чем Занимаемся */
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.features-whatdo-common p {
+  color: var(--inside-color);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.features-whatdo-common h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.team-container {
+  /* стили для Наша Команда */
+  background: var(--team-container-background);
+}
+.team-container h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+}
+.team-container h3 {
+  font-size: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: center;
+}
+.team-container p {
+  color: var(--inside-color);
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.footer {
+  /* стили для подвала сайта */
+  background-color: var(--title-background-color);
+  line-height: 1.7;
+}
+address {
+  /* стили для почтового адреса в футере */
+  font-style: normal;
+  color: var(--title-color);
+}
+.tel-in-footer {
+  /* стили для номера телефона в футере */
+  color: var(--tel-in-footer-color);
+}
+
+.portfolio-button {
+  /* стили для ряда кнопок в Портфолио */
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  background-color: var(--team-container-background);
+  border: none;
+  cursor: pointer;
+}
+.portfolio-button:hover,
+.portfolio-button:focus,
+.portfolio-button:active {
+  background-color: var(--active-color);
+}
+
+.projects h3 {
+  /* стили для Проектов */
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.projects p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--inside-color);
+}
+
+footer .studio-logotext {
+  /* стили для части Studio в логотипе в Футере сайта */
+  color: var(--title-color);
+}
