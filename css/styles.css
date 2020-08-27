@@ -13,6 +13,22 @@
 Основной шрифт: Roboto normal and bold
 Шрифт Логотипа: Raleway bold
  */
+
+/* border-box уже прописан в modern-normalaize значит можно и не пиасть что весть html bb */
+* {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 :root {
   --title-color: #ffffff;
   --title-background-color: #2f303a;
@@ -31,8 +47,24 @@ body {
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 0.03em;
+
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* ===================================================== */
+/* ===============HEADER================================ */
+/* ===================================================== */
+
+.logo {
+  margin-top: 24px;
+  margin-bottom: 25px;
+  margin-right: 93px;
+  display: inline-block;
+}
 .web-logotext {
   /* стили для части Web в логотипе */
   font-family: Raleway, sans-serif;
@@ -50,8 +82,44 @@ body {
   color: var(--logo-studio-color);
 }
 
+.site-nav,
+.mail-tel-nav {
+  display: flex;
+  padding: 0;
+}
+.site-nav .item:not(:last-child) {
+  margin-right: 40px;
+}
+/* .site-nav .item:last-child {
+  margin-right: 229px;
+} */
+.mail-tel-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+.site-nav {
+  margin-right: auto;
+}
+/* .site-nav {
+  justify-content: start;
+} */
 .site-nav a {
   color: var(--minititles-color);
+}
+
+.header-navigation {
+  font-weight: 500;
+  /* display: flex;
+  justify-content: space-between; */
+}
+
+.header-navigation-cont {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-container {
+  display: flex;
+  /* padding: 0; */
 }
 
 a {
@@ -76,7 +144,12 @@ li {
 
 .mail-tel-nav {
   letter-spacing: 0.02em;
+  /* justify-content: end; */
 }
+
+/* ===================================================== */
+/* ===============TITLE================================= */
+/* ===================================================== */
 
 .title {
   /*  стили для заголовка */
@@ -130,6 +203,7 @@ li {
 }
 .team-container h3 {
   font-size: 500;
+  /*проверить верхнюю строку!!!!! */
   font-size: 16px;
   line-height: 1.2;
   text-align: center;
