@@ -16,33 +16,36 @@
 <body>
 
     <!-- Верхняя линия -->
-    <header>
-        <nav>
-            <a href="/" lang="en"> <span class="web-logotext">Web</span><span class="studio-logotext">Studio</span>
+    <header class="page-header ">
+
+        <div class="container flexbox">
+
+            <a href="/" lang="en" class="link logo">
+                <span class="web-logotext">Web</span><span class="studio-logotext">Studio</span>
             </a>
 
-            <ul class="site-nav">
-                <li>
-                    <a href="./index.html"> <span>Студия</span> </a>
-                </li>
-                <li>
-                    <a href="./portfolio.html" class="current"> <span>Портфолио</span> </a>
-                </li>
-                <li>
-                    <a href="/"> <span>Контакты</span> </a>
-                </li>
-                <li>
-                    <a href="/"> <span>About</span> </a>
-                </li>
+            <nav class="header-nav">
+                <ul class="list site-nav flexbox">
+                    <li class="item">
+                        <a href="./index.html" class="link"> <span>Студия</span> </a>
+                    </li>
+                    <li class="item">
+                        <a href="./portfolio.html" class="link current"> <span>Портфолио</span> </a>
+                    </li>
+                    <li class="item">
+                        <a href="/" class="link"> <span>Контакты</span> </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <ul class="list mail-tel-nav flexbox">
+                <li class="item"> <a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a> </li>
+                <li class="item"> <a href="tel:+380991111111" class="link">+38 096 111 11 11</a> </li>
             </ul>
 
-            <ul class="mail-tel-nav">
-                <li> <a href="mailto:info@devstudio.com">info@devstudio.com</a> </li>
-                <li> <a href="tel:+380991111111">+38 096 111 11 11</a> </li>
-            </ul>
-        </nav>
+        </div>
+
     </header>
-
     <main>
 
         <section>
@@ -107,18 +110,19 @@
 
     <!-- Подвал -->
     <footer class="footer">
-        <ul>
-            <li>
-                <a href="/" lang="en"> <span class="web-logotext">Web</span><span class="studio-logotext">Studio</span>
+        <ul class="list">
+            <li class="item">
+                <a href="/" lang="en" class="link logo"> <span class="web-logotext">Web</span><span
+                        class="studio-logotext">Studio</span>
                 </a>
             </li>
-            <li>
+            <li class="item">
                 <address>
                     <span>г. Киев, пр-т Леси Украинки, 26</span>
                 </address>
             </li>
-            <li> <a href="mailto:info@example.com">info@example.com</a> </li>
-            <li> <a href="tel:+380991111111" class="tel-in-footer">+38 099 111 11 11</a> </li>
+            <li class="item"> <a href="mailto:info@example.com" class="link">info@example.com</a> </li>
+            <li class="item"> <a href="tel:+380991111111" class="link tel-in-footer">+38 099 111 11 11</a> </li>
         </ul>
     </footer>
 </body>

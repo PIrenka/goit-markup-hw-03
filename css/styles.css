@@ -15,7 +15,7 @@
  */
 
 /* border-box уже прописан в modern-normalaize значит можно и не пиасть что весть html bb */
-* {
+html {
   box-sizing: border-box;
 }
 *,
@@ -38,6 +38,7 @@ img {
   --logo-studio-color: #000000;
   --team-container-background: #f5f4fa;
   --tel-in-footer-color: rgba(255, 255, 255, 0.6);
+  --header-bottom-line: #ececec;
 }
 
 body {
@@ -47,19 +48,55 @@ body {
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 0.03em;
+}
 
+.container {
+  /* тут кроме этого ничего больше не задавать, явную геометрию в других класах описывать */
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+  /* outline: 3px solid red; */
 }
 
-/* ===================================================== */
-/* ===============HEADER================================ */
-/* ===================================================== */
+.list {
+  /* стили списков во всем документе*/
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  /* стили к ссылкам */
+  text-decoration: none;
+  color: var(--inside-color);
+  cursor: pointer;
+}
+.item .link:hover,
+.item .link:focus,
+.item .link:active {
+  /* возможность выделять другим цветом ссылки при наведении курсора на них */
+  color: var(--active-color);
+}
+
+/* ======================================================== */
+/* ======================HEADER============================ */
+/* ======================================================== */
+
+.flexbox {
+  /* для того чтоб списки смогли стать в ряд */
+  display: flex;
+}
 
 .logo {
+  /* стили геометрии для логотипа в целом */
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+
   margin-top: 24px;
   margin-bottom: 25px;
   margin-right: 93px;
@@ -67,89 +104,50 @@ body {
 }
 .web-logotext {
   /* стили для части Web в логотипе */
-  font-family: Raleway, sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
   color: var(--active-color);
 }
 .studio-logotext {
   /* стили для части Studio в логотипе */
-  font-family: Raleway, sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
   color: var(--logo-studio-color);
 }
 
-.site-nav,
-.mail-tel-nav {
-  display: flex;
-  padding: 0;
+.page-header {
+  border-bottom: 1px solid var(--header-bottom-line);
 }
+.page-header .flexbox {
+  /* выравнивание по центру содержимого хедера */
+  align-items: center;
+}
+
+.header-nav {
+  /* жирность текста в навигации хедера */
+  font-weight: 500;
+  margin-right: auto;
+}
+
 .site-nav .item:not(:last-child) {
-  margin-right: 40px;
+  margin-right: 50px;
 }
-/* .site-nav .item:last-child {
-  margin-right: 229px;
-} */
+.site-nav .link {
+  /* цвет ссылок в левой навигации хедера */
+  color: var(--minititles-color);
+}
+.site-nav .link.current {
+  /* выделение ссылки в навигации хедера текуущей страници другим цветом */
+  color: var(--active-color);
+}
+
+.mail-tel-nav {
+  /* стили к ссылкам правой части навигации хедера */
+  letter-spacing: 0.02em;
+}
 .mail-tel-nav .item:not(:last-child) {
   margin-right: 50px;
 }
-.site-nav {
-  margin-right: auto;
-}
-/* .site-nav {
-  justify-content: start;
-} */
-.site-nav a {
-  color: var(--minititles-color);
-}
 
-.header-navigation {
-  font-weight: 500;
-  /* display: flex;
-  justify-content: space-between; */
-}
-
-.header-navigation-cont {
-  display: flex;
-  justify-content: space-between;
-}
-
-.header-container {
-  display: flex;
-  /* padding: 0; */
-}
-
-a {
-  /* стили к ссылкам */
-  text-decoration: none;
-  color: var(--inside-color);
-  cursor: pointer;
-}
-a:hover,
-a:focus,
-a:active {
-  color: var(--active-color);
-}
-.site-nav a.current {
-  color: var(--active-color);
-}
-
-li {
-  /* стили к пунктам списков */
-  list-style-type: none;
-}
-
-.mail-tel-nav {
-  letter-spacing: 0.02em;
-  /* justify-content: end; */
-}
-
-/* ===================================================== */
-/* ===============TITLE================================= */
-/* ===================================================== */
+/* ======================================================== */
+/* ======================TITLE============================= */
+/* ======================================================== */
 
 .title {
   /*  стили для заголовка */
@@ -157,17 +155,23 @@ li {
   color: var(--title-color);
   font-weight: 900;
   font-size: 44px;
-  line-height: 1.4;
+  line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
 }
 
+h1 {
+  /* ПЕРЕФРАЗИРОВАТЬ В КЛАССЫ */
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .button {
-  /* стили для кнопки Заказать Услуги */
+  /* стили для кнопки Заказать Услугу */
   color: var(--title-color);
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.9;
+  line-height: 1.87;
   background-color: var(--active-color);
   letter-spacing: 0.06em;
 }
@@ -176,18 +180,18 @@ li {
   /* стили для Чем Занимаемся */
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.1;
+  line-height: 1.14;
   text-transform: uppercase;
 }
 .features-whatdo-common p {
   color: var(--inside-color);
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 1.71;
 }
 .features-whatdo-common h2 {
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.2;
+  line-height: 1.71;
   text-align: center;
 }
 
@@ -198,27 +202,26 @@ li {
 .team-container h2 {
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.2;
+  line-height: 1.17;
   text-align: center;
 }
 .team-container h3 {
-  font-size: 500;
-  /*проверить верхнюю строку!!!!! */
+  /* font-size: 500; ????????????????*/
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 1.19;
   text-align: center;
 }
 .team-container p {
   color: var(--inside-color);
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 1.19;
   text-align: center;
 }
 
 .footer {
   /* стили для подвала сайта */
   background-color: var(--title-background-color);
-  line-height: 1.7;
+  line-height: 1.71;
 }
 address {
   /* стили для почтового адреса в футере */
@@ -234,7 +237,7 @@ address {
   /* стили для ряда кнопок в Портфолио */
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.62;
   text-align: center;
   background-color: var(--team-container-background);
   border: none;
@@ -255,7 +258,7 @@ address {
 }
 .projects p {
   font-size: 16px;
-  line-height: 1.9;
+  line-height: 1.87;
   color: var(--inside-color);
 }
 
