@@ -210,9 +210,11 @@ body {
 /* ======================FEATURES========================== */
 /* ======================================================== */
 
-.featuress {
-  background: aquamarine;
-}
+/* .common-features-whatwedo { */
+/* общие стили для отступов двух секций (особенности и чем занимаемся) */
+/* background-color: yellow;
+} */
+
 .container.features {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -235,26 +237,33 @@ body {
   padding: 0;
 }
 
-.list.features {
-  outline: 3px dotted blue;
-  flex-wrap: wrap;
-}
 .list.features .item {
-  outline: 2px dashed green;
-  width: calc((100% - 3 * 30px) / 4);
+  flex-basis: calc((100% - 3 * 30px) / 4);
 }
 .list.features .item:not(:last-child) {
   margin-right: 30px;
 }
 
-/* ------------------------- */
+/* ======================================================== */
+/* ======================WHAT WE DO======================== */
+/* ======================================================== */
 
-.whatdo .text {
+.container.whatwedo {
+  padding-bottom: 94px;
+}
+.whatwedo .title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.71;
   text-align: center;
   margin-top: 0;
+  margin-bottom: 50px;
+}
+.whatwedo.item {
+  flex-basis: calc ((100% - 2 * 30px) / 3);
+}
+.whatwedo .item:not(:last-child) {
+  margin-right: 30px;
 }
 
 /* ======================================================== */
