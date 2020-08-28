@@ -57,7 +57,7 @@ body {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  outline: 3px solid red;
+  /* outline: 3px solid red; */
 }
 
 .list {
@@ -96,11 +96,13 @@ body {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  display: inline-block;
+}
 
+.page-header .logo {
   margin-top: 24px;
   margin-bottom: 25px;
   margin-right: 93px;
-  display: inline-block;
 }
 .web-logotext {
   /* стили для части Web в логотипе */
@@ -183,7 +185,7 @@ body {
   padding-left: 237px;
   padding-right: 237px;
 
-  outline: 2px solid orange;
+  /* outline: 2px solid orange; */
 }
 
 .hero .button {
@@ -199,7 +201,7 @@ body {
   /* margin-left: 500px; */
   /* margin-right: 500px; */
   /* width: auto; */
-  outline: 2px solid orange;
+  /* outline: 2px solid orange; */
 
   padding: 10px 32px;
   /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
@@ -342,7 +344,12 @@ border-radius: 0px 0px 4px 4px; }*/
   background-color: var(--title-background-color);
   line-height: 1.71;
 }
-address {
+.page-footer .logo {
+  margin-top: 60px;
+  margin-bottom: 9px;
+  /* outline: 6px solid yellow; */
+}
+.address {
   /* стили для почтового адреса в футере */
   font-style: normal;
   color: var(--title-color);
