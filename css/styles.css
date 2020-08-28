@@ -343,20 +343,33 @@ border-radius: 0px 0px 4px 4px; }*/
   /* стили для подвала сайта */
   background-color: var(--title-background-color);
   line-height: 1.71;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  /* display: block; */
 }
+
 .page-footer .logo {
-  margin-top: 60px;
-  margin-bottom: 9px;
+  /* отступы для Лого в футере */
+  margin-bottom: 20px;
   /* outline: 6px solid yellow; */
 }
+.page-footer .studio-logotext {
+  /* стили для части Studio в логотипе в Футере сайта */
+  color: var(--title-color);
+}
+
 .address {
   /* стили для почтового адреса в футере */
   font-style: normal;
   color: var(--title-color);
+  display: block;
 }
-.tel-in-footer {
+.mailtel-in-footer {
   /* стили для номера телефона в футере */
   color: var(--tel-in-footer-color);
+  margin-top: 9px;
+  /* padding-bottom: 60px; */
+  display: block;
 }
 
 /* ======================================================== */
@@ -390,9 +403,4 @@ border-radius: 0px 0px 4px 4px; }*/
   font-size: 16px;
   line-height: 1.87;
   color: var(--inside-color);
-}
-
-footer .studio-logotext {
-  /* стили для части Studio в логотипе в Футере сайта */
-  color: var(--title-color);
 }
