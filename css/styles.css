@@ -11,10 +11,9 @@
 
 Размер шрифта:
 Основной шрифт: Roboto normal and bold
-Шрифт Логотипа: Raleway bold
- */
+Шрифт Логотипа: Raleway bold */
 
-/* border-box уже прописан в modern-normalaize значит можно и не пиасть что весть html bb */
+/*? border-box уже прописан в modern-normalaize значит можно и не пиасть что весть html bb ?*/
 html {
   box-sizing: border-box;
 }
@@ -69,7 +68,7 @@ body {
 }
 
 .link {
-  /* стили к ссылкам */
+  /* стили к ссылкам во всем документе*/
   text-decoration: none;
   color: var(--inside-color);
   cursor: pointer;
@@ -92,7 +91,7 @@ body {
 }
 
 .logo {
-  /* стили геометрии для логотипа в целом */
+  /*общие стили для логотипа в целом */
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -102,6 +101,7 @@ body {
 }
 
 .page-header .logo {
+  /* стили геометрии (отступов) для логотипа в целом */
   margin-top: 24px;
   margin-bottom: 25px;
   margin-right: 93px;
@@ -116,6 +116,7 @@ body {
 }
 
 .page-header {
+  /* нижняя линия внизу хедера */
   border-bottom: 1px solid var(--header-bottom-line);
 }
 .page-header .flexbox {
@@ -128,13 +129,14 @@ body {
   font-weight: 500;
   margin-right: auto;
 }
-/* .header-nav .item {
-  /* сделать область наведения больше */
-/*padding-top: 15px;
+/* .header-nav .item { */
+/* сделать область наведения больше */
+/* padding-top: 15px;
   padding-bottom: 15px;
-} */
+  } */
 
 .site-nav .item:not(:last-child) {
+  /* отступ справа кроме последнего ли в сайт-нав */
   margin-right: 50px;
 }
 .site-nav .link {
@@ -158,10 +160,6 @@ body {
 /* ======================HERO============================== */
 /* ======================================================== */
 
-/* .container.hero {
-  width: maxt;
-} */
-
 .hero {
   /*  стили для секции Hero*/
   background: var(--title-background-color);
@@ -175,15 +173,12 @@ body {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  /* text-align: center; */
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  /* width: max-width; */
 
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 200px;
-  /* max-width: 100%; */
   padding-left: 237px;
   padding-right: 237px;
 
@@ -200,14 +195,12 @@ body {
   letter-spacing: 0.06em;
   margin-top: 30px;
   margin-bottom: 200px;
-  /* margin-left: 500px; */
-  /* margin-right: 500px; */
-  /* width: auto; */
   /* outline: 2px solid orange; */
 
   padding: 10px 32px;
   /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
   border-radius: 4px;
+  cursor: pointer;
 }
 
 /* ======================================================== */
@@ -224,7 +217,7 @@ body {
   padding-bottom: 94px;
 }
 .list.features .title {
-  /* стили для Чем Занимаемся */
+  /* стили для заголовков h3 ОСОБЕННОСТЕЙ */
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -234,6 +227,7 @@ body {
   margin-bottom: 10px;
 }
 .list.features .text {
+  /* стили для парграфов h3 ОСОБЕННОСТЕЙ */
   color: var(--inside-color);
   font-size: 14px;
   line-height: 1.71;
@@ -242,9 +236,11 @@ body {
 }
 
 .list.features .item {
+  /* ширина столбиков с текстом в Особенностях */
   flex-basis: calc((100% - 3 * 30px) / 4);
 }
 .list.features .item:not(:last-child) {
+  /* отступы между столбиками с текстом в Особенностях */
   margin-right: 30px;
 }
 
@@ -292,6 +288,7 @@ body {
 
 .list.team {
   /* выделения места чисто под карточки */
+  /* flex-wrap: nowrap; */
   width: calc((100% - 30 * 3) / 4);
   align-items: center;
   padding-bottom: 94px;
@@ -329,12 +326,9 @@ body {
 /* cтили для бордера карточки ???*/
 /* position: relative;
   border: 1px solid var(--team-container-background);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-border-radius: 0px 0px 4px 4px; }*/
-
-/* .item.flexbox {
-  flex-direction: column;
-  align-items: center;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 } */
 
 /* ======================================================== */
@@ -380,6 +374,8 @@ border-radius: 0px 0px 4px 4px; }*/
 /* =================PORTFOLIO-PAGE========================= */
 /* ======================================================== */
 
+/* =================PORTFOLIO-PAGE-кнопки================== */
+
 .portfolio-button {
   /* стили для ряда кнопок в Портфолио */
   font-weight: 500;
@@ -416,6 +412,8 @@ border-radius: 0px 0px 4px 4px; }*/
   border: solid var(--team-container-background);
   border-radius: 4px;
 }
+
+/* =================PORTFOLIO-PAGE-проекты================ */
 
 .page-portfolio .projects .title {
   /* стили для заголовков в карточках Проектов */
