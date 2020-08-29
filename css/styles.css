@@ -9,7 +9,7 @@
 Цвет фона для Заголовка и Футера: #2F303A
 Цвет фона для Наша Команда: #F5F4FA
 
-Размер шрифта: 
+Размер шрифта:
 Основной шрифт: Roboto normal and bold
 Шрифт Логотипа: Raleway bold
  */
@@ -39,6 +39,7 @@ img {
   --team-container-background: #f5f4fa;
   --tel-in-footer-color: rgba(255, 255, 255, 0.6);
   --header-bottom-line: #ececec;
+  --projects-card-border: #eeeeee;
 }
 
 body {
@@ -87,6 +88,7 @@ body {
 .flexbox {
   /* для того чтоб списки смогли стать в ряд */
   display: flex;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -343,11 +345,13 @@ border-radius: 0px 0px 4px 4px; }*/
   /* стили для подвала сайта */
   background-color: var(--title-background-color);
   line-height: 1.71;
-  padding-top: 60px;
-  padding-bottom: 60px;
   /* display: block; */
 }
 
+.page-footer .list {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 .page-footer .logo {
   /* отступы для Лого в футере */
   margin-bottom: 20px;
@@ -385,22 +389,69 @@ border-radius: 0px 0px 4px 4px; }*/
   background-color: var(--team-container-background);
   border: none;
   cursor: pointer;
+  padding: 0;
+  padding: 6px 22px;
 }
 .portfolio-button:hover,
 .portfolio-button:focus,
 .portfolio-button:active {
+  /* cтили для кнопок портфолио при ховере (изменение цвета заливки и текста) */
   background-color: var(--active-color);
+  color: var(--title-color);
 }
 
-.projects h3 {
-  /* стили для Проектов */
+.page-portfolio .list.button {
+  /* отступы ряда кнопок от секции Проектов */
+  padding-top: 94px;
+  margin-bottom: 50px;
+  justify-content: center;
+}
+
+.page-portfolio .list.button .item:not(:last-child) {
+  /* отступы справа для кнопок в верхнем ряду страници Портфолио */
+  margin-right: 8px;
+}
+.page-portfolio .list.button .item {
+  /* бордер для кнопок в верхнем ряду страници Портфолио */
+  border: solid var(--team-container-background);
+  border-radius: 4px;
+}
+
+.page-portfolio .projects .title {
+  /* стили для заголовков в карточках Проектов */
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
-.projects p {
+.page-portfolio .projects .text {
+  /* стили для параграфов в карточках Проекто */
   font-size: 16px;
   line-height: 1.87;
   color: var(--inside-color);
+}
+
+.page-portfolio .projects {
+  /* распределение карточек в ряд, после их стало по три в одном ряду */
+  /* flex-wrap: wrap; - это перенесла в начало в класс .flexbox*/
+  padding-bottom: 94px;
+}
+.page-portfolio .projects .item {
+  /* размер ширины под одну карточку */
+  flex-basis: calc((100% - 30px * 2) / 3);
+}
+.page-portfolio .projects .item {
+  /* отступы для карточек справа и снизу для всех в проектах Портфолио */
+  margin-right: 30px;
+  margin-bottom: 30px;
+  background-color: var(--title-color);
+  border: 1px solid var(--projects-card-border);
+}
+.page-portfolio .projects .item:nth-child(3n) {
+  /* убирает отступы справа у каждой третей карточки */
+  margin-right: 0;
+}
+.page-portfolio .projects .item:nth-last-of-type(-n + 3) {
+  /* убирает отступы снизу у трёх последних карточек */
+  margin-bottom: 0;
 }
