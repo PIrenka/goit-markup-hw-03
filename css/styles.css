@@ -150,6 +150,7 @@ body {
 
 .mail-tel-nav {
   /* стили к ссылкам правой части навигации хедера */
+  font-weight: 500;
   letter-spacing: 0.02em;
 }
 .mail-tel-nav .item:not(:last-child) {
@@ -419,14 +420,22 @@ body {
   /* стили для заголовков в карточках Проектов */
   font-weight: 700;
   font-size: 18px;
-  line-height: 2;
+  line-height: 1.71;
   letter-spacing: 0.06em;
+  margin: 0;
+  margin-bottom: 4px;
 }
 .page-portfolio .projects .text {
   /* стили для параграфов в карточках Проекто */
   font-size: 16px;
   line-height: 1.87;
   color: var(--inside-color);
+  margin: 0;
+}
+.under-the-pic {
+  padding: 20px 24px;
+  /* text-align: left;
+  vertical-align: top; */
 }
 
 .page-portfolio .projects {
