@@ -164,8 +164,15 @@ body {
 .hero {
   /*  стили для секции Hero*/
   background: var(--title-background-color);
-  text-align: center;
+}
+
+.hero .container {
+  /* стили для контейнера Героя с заголовком и кнопкой */
+  /* outline: 5px solid yellow; */
   max-width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 200px 252px;
 }
 
 .hero-title {
@@ -176,14 +183,9 @@ body {
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 200px;
-  padding-left: 237px;
-  padding-right: 237px;
-
-  /* outline: 2px solid orange; */
+  text-align: center;
+  margin: 0;
+  margin-bottom: 30px;
 }
 
 .hero .button {
@@ -194,11 +196,10 @@ body {
   line-height: 1.87;
   background-color: var(--active-color);
   letter-spacing: 0.06em;
-  margin-top: 30px;
-  margin-bottom: 200px;
   /* outline: 2px solid orange; */
 
   padding: 10px 32px;
+  border: none;
   /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
   border-radius: 4px;
   cursor: pointer;
@@ -208,16 +209,12 @@ body {
 /* ======================FEATURES========================== */
 /* ======================================================== */
 
-/* .common-features-whatwedo { */
-/* общие стили для отступов двух секций (особенности и чем занимаемся) */
-/* background-color: yellow;
-} */
-
-.container.features {
+.features .container {
+  /* внутренние отступы для контейнера Особенности */
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.list.features .title {
+.features .list .title {
   /* стили для заголовков h3 ОСОБЕННОСТЕЙ */
   font-weight: 700;
   font-size: 14px;
@@ -227,7 +224,7 @@ body {
   padding: 0;
   margin-bottom: 10px;
 }
-.list.features .text {
+.features .list .text {
   /* стили для парграфов h3 ОСОБЕННОСТЕЙ */
   color: var(--inside-color);
   font-size: 14px;
@@ -236,11 +233,11 @@ body {
   padding: 0;
 }
 
-.list.features .item {
+.features .list .item {
   /* ширина столбиков с текстом в Особенностях */
   flex-basis: calc((100% - 3 * 30px) / 4);
 }
-.list.features .item:not(:last-child) {
+.features .list .item:not(:last-child) {
   /* отступы между столбиками с текстом в Особенностях */
   margin-right: 30px;
 }
@@ -249,7 +246,8 @@ body {
 /* ======================WHAT WE DO======================== */
 /* ======================================================== */
 
-.container.whatwedo {
+.whatwedo .container {
+  /* внутренние отступы для контейнера Чем Мы Занимаемся  */
   padding-bottom: 94px;
 }
 .whatwedo .title {
@@ -261,6 +259,7 @@ body {
   margin-bottom: 50px;
 }
 .whatwedo.item {
+  /* отведенная ширина под фото из раздела */
   flex-basis: calc ((100% - 2 * 30px) / 3);
 }
 .whatwedo .item:not(:last-child) {
@@ -275,10 +274,14 @@ body {
   /* стили для Наша Команда */
   background: var(--team-container-background);
 }
-
-.our-team .title {
-  /* стили к заголовку h2 Нашей Команды */
+.our-team .container {
+  /* внутренние отступы для контейнера Наша Команда */
   padding-top: 94px;
+  padding-bottom: 9px;
+}
+
+.our-team .container .title {
+  /* стили к заголовку h2 Нашей Команды */
   margin: 0;
   font-weight: 700;
   font-size: 36px;
@@ -301,7 +304,16 @@ body {
 .list.team .item {
   /* фон карточек команды */
   background-color: var(--title-color);
+  border-radius: 0px 0px 4px 4px;
 }
+
+/* cтили для бордера карточки ???*/
+/* position: relative;
+  border: 1px solid var(--team-container-background);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+} */
 
 .list.team .item .title {
   /* стили к заголовкам списка h3 Нашей Команды  */
@@ -322,15 +334,6 @@ body {
   text-align: center;
   padding-bottom: 30px;
 }
-
-/* .list.team .item { */
-/* cтили для бордера карточки ???*/
-/* position: relative;
-  border: 1px solid var(--team-container-background);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-} */
 
 /* ======================================================== */
 /* ======================FOOTER============================ */
